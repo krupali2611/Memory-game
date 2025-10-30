@@ -1,0 +1,38 @@
+.card{
+    perspective: 1000px;
+    width: 100px;
+    height: 100px;
+}
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+ 
+}
+.card-back,
+ .card-front{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backface-visibility: hidden;
+    border: 2px solid #555;
+    border-radius: 10px;
+}
+.card-front{
+    background: #fff;
+    transform: rotateY(180deg);
+}
+.card-back{
+    background: #444;
+    color: white;
+    
+}
+.card-inner.flipped{
+    transform: rotateY(180deg);
+}
